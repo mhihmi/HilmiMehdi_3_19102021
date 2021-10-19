@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/*------------------------------------------------*/
+/*                     RESET                      */
+/*------------------------------------------------*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 10px div by def of 16px ==>> 62.5% */
+  /* 100% is better for zoom consistence */
+  font-size: 100%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+/*------------------------------------------------*/
+/*                     GENERAL STYLES             */
+/*------------------------------------------------*/
+body {
+  font-family: "Roboto", "Shrikhand," sans-serif;
+  line-height: 1.3;
+  /* Sans unité car les valeurs de type <number> sont préférables au type <lenght> : notion d'héritage */
+}
+
+/*# sourceMappingURL=styles.css.map */
