@@ -5,11 +5,9 @@ Vous venez d’être recruté chez Ohmyfood!, en tant que développeur junior. F
 
 Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la restauration. L'objectif est de développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques. En plus des systèmes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée. Finis, les temps d'attente au restaurant !
 
-![Logo](https://github.com/mhihmi/HilmiMehdi_3_19102021/main/img/readme/logo_ohmyfood.png)
-
 Voici la maquette à intégrer :
 
-![Maquette_Mobile](https://github.com/mhihmi/HilmiMehdi_3_19102021/main/img/readme/Maquettes_Ohmyfood.jpg)
+![Maquette_Mobile](https://github.com/mhihmi/HilmiMehdi_3_19102021/blob/124db68094e030cbb3f7be5c653afba466352e81/img/readme/Maquettes_Ohmyfood.jpg)
 
 ## Identité Graphique :
 **Polices**
