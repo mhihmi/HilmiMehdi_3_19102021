@@ -7,6 +7,7 @@
         background: linear-gradient(to right, $color-primary, $color-secondary, $color-tertiary);
         background-size: 300% 300%;
         background-clip: text;
+        @include padding (calculateRem(10px), calculateRem(10px), calculateRem(10px), calculateRem(10px));
         -webkit-background-clip: text;
         color: rgba(0, 0, 0, 1);
         transition: color .4s ease-in-out;
@@ -21,6 +22,19 @@
     &Link {
         @include absolute-el (50%, null, null, 3.5%, 50%, -50%);
         @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(16px), calculateRem(26px));
-        color: black;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-50%);
+        }
+
+        .fa-arrow-left path {
+            fill: rgba(0, 0, 0, 1);
+        }
+
+        &:hover .fa-arrow-left path {
+            fill: url(#linear);
+            // transform: scaleX(10px);
+        }
     }
 }

@@ -24,9 +24,19 @@
 </head>
 
 <body>
+    <!-- setting gradients for SVGs  -->
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="svg-settings">
+        <defs>
+            <linearGradient id="linear">
+                <stop class="linear-stop1" offset="0%"></stop>
+                <stop class="linear-stop2" offset="50%"></stop>
+                <stop class="linear-stop3" offset="100%"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
     <!-- HEADER -->
     <header class="header">
-        <a href="../index.html" class="headerLink"><i class="fas fa-arrow-left"></i></a>
+        <a href="../index.html" class="headerLink"><i class="fas fa-arrow-left fill-gradient-linear"></i></a>
         <h1 class="headerLogo">ohmyfood</h1>
     </header>
     <main></main>

@@ -9,3 +9,26 @@ ul {
 .pageWrapper {
     margin: 0 3.5vw;
 }
+
+.svg-settings {
+    /* Hiding this content since it's just settings. See - https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.linear-stop1 {
+    stop-color: $color-primary;
+}
+
+.linear-stop2 {
+    stop-color: $color-secondary;
+}
+
+.linear-stop3 {
+    stop-color: $color-tertiary;
+}

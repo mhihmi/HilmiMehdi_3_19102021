@@ -39,6 +39,29 @@ ul {
   margin: 0 3.5vw;
 }
 
+.svg-settings {
+  /* Hiding this content since it's just settings. See - https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.linear-stop1 {
+  stop-color: #9356dc;
+}
+
+.linear-stop2 {
+  stop-color: #ff79da;
+}
+
+.linear-stop3 {
+  stop-color: #99e2d0;
+}
+
 /*------------------------------------------------*/
 /*                     TYPOGRAPHY                 */
 /*------------------------------------------------*/
@@ -166,6 +189,10 @@ p {
   background: linear-gradient(to right, #9356dc, #ff79da, #99e2d0);
   background-size: 300% 300%;
   background-clip: text;
+  padding-top: 0.625rem;
+  padding-right: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 0.625rem;
   -webkit-background-clip: text;
   color: black;
   transition: color 0.4s ease-in-out;
@@ -185,7 +212,16 @@ p {
   transform: translate(50%, -50%);
   font-size: 1rem;
   font-size: clamp(1rem, 0.6388674884rem + 1.5408320493vw, 1.625rem);
-  color: black;
+  transition: all 0.3s ease-in-out;
+}
+.headerLink:hover {
+  transform: translateY(-50%);
+}
+.headerLink .fa-arrow-left path {
+  fill: black;
+}
+.headerLink:hover .fa-arrow-left path {
+  fill: url(#linear);
 }
 
 /*# sourceMappingURL=styles.css.map */
