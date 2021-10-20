@@ -1,0 +1,31 @@
+/*------------------------------------------------*/
+/*                     TYPOGRAPHY                 */
+/*------------------------------------------------*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    line-height: 1.3;
+    /* Sans unité car les valeurs de type <number> sont préférables au type <lenght> : notion d'héritage */
+}
+
+h1 {
+    font-family: 'Shrikhand', sans-serif;
+    @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(29px), calculateRem(48px));
+    // vw max ; vw min ; min font-size ; max font-size
+}
+
+h2 {
+    @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(24px), calculateRem(28px));
+    font-weight: 700; //bold
+}
+
+h3 {
+    @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(18px), calculateRem(22px));
+    font-weight: 500; //Medium
+}
+
+p {
+    @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(16px), calculateRem(18px));
+    font-weight: 500; //Medium
+}

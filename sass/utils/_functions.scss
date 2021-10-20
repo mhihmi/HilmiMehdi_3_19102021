@@ -1,0 +1,6 @@
+// REM CALC 
+
+@function calculateRem($size) {
+    $remSize: math.div($size, 16px);
+    @return $remSize * 1rem;
+}

@@ -1,0 +1,222 @@
+// Utiliser les mixins avec des paramètres, sinon utiliser les placeholders !
+// S'utilise avec @include
+
+@use 'sass:math';
+
+// REM CALC WITH FALLBACK
+
+// @mixin font-size($size) {
+//     font-size: $size;
+//     font-size: calculateRem($size);
+// }
+
+// BREAKPOINTS
+
+// 640px, 1024px, 1400px
+$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+// FLUID TYPE
+
+@mixin fluid-type($min-vw, $max-vw, $min-value, $max-value) {
+    $factor: math.div(1, $max-vw - $min-vw) * ($max-value - $min-value);
+    $calc-value: unquote("#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }");
+
+    font-size: $min-value; // Fallback for older browsers
+    font-size: clamp(#{ if($min-value > $max-value, $max-value, $min-value) }, #{ $calc-value }, #{ if($min-value > $max-value, $min-value, $max-value) });
+}
+
+// Padding mixin
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+// Margin mixin
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+// Usage definition
+// @include padding(top, right, bottom, left);
+// @include margin(top, right, bottom, left);
+
+// Usage 1
+// @include padding(1px, 2px, 3px, 4px,);
+// @include margin(1px, 2px, 3px, 4px);
+
+// Output 1
+// padding: 1px 2px 3px 4px;
+// margin: 1px 2px 3px 4px;
+
+// Usage 2 (with null properties)
+// @include padding(1px, null, 3px, 4px);
+// @include margin(1px, 2px, null, 4px);
+
+// Output 2
+// padding-top: 1px;
+// padding-bottom: 3px;
+// padding-left: 4px;
+// margin-top: 1px;
+// margin-right: 2px;
+// margin-left: 4px;
+
+// LINKS
+
+@mixin linx ($link, $visit, $hover, $active) {
+    a {
+        color: $link;
+        text-decoration: none;
+
+        &:visited {
+            color: $visit;
+        }
+
+        &:hover {
+            color: $hover;
+            font-weight: 600;
+            transition: 300ms;
+        }
+
+        &:active {
+            color: $active;
+            font-weight: 600;
+        }
+    }
+}
+
+// BOX SHADOW
+
+@mixin box_shadow ($level) {
+
+    @if $level==1 {
+        box-shadow: 0 1px 3px var(--color-shadow);
+    }
+
+    @else if $level==2 {
+        box-shadow: 0 3px 6px var(--color-shadow);
+    }
+
+    @else if $level==3 {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    @else if $level==4 {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    @else if $level==5 {
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    }
+
+}
+
+// ABSOLUTE ELEMENTS
+
+@mixin absolute-el ($top, $right, $bottom, $left, $x, $y) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    transform: translate($x, $y);
+}
+
+// TEXT SHORTENING
+
+// Default line-clamp is 1
+// For single line just leave it empty
+@mixin text-shorten($numLines: 1) {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @supports (-webkit-line-clamp: $numLines) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: $numLines;
+        -webkit-box-orient: vertical;
+    }
+}
+
+// ANIMATION 
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+// Exemple : 
+// Define animation name, and properties
+// @include keyframes(fade-out) {
+//     0% { opacity: 1; }
+//     90% { opacity: 0; }
+//   }
+// Add animation to element
+//   .element {
+//     width: 100px;
+//     height: 100px;
+//     background: black;
+//     @include animation('fade-out 5s 3');
+//   }
+
+@mixin background-gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+
+    @if $orientation=='vertical' {
+        background: -webkit-linear-gradient(top, $start-color, $end-color);
+        background: linear-gradient(to bottom, $start-color, $end-color);
+    }
+
+    @else if $orientation=='horizontal' {
+        background: -webkit-linear-gradient(left, $start-color, $end-color);
+        background: linear-gradient(to right, $start-color, $end-color);
+    }
+
+    @else {
+        background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+        background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+}
+
+// Exemple
+// .foo {
+//     @include background-gradient(red, black, 'vertical');
+//   }
