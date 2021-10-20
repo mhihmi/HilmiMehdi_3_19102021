@@ -97,29 +97,123 @@ $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
 
 // BOX SHADOW
 
-@mixin box_shadow ($level) {
+/*######################### MIXIN MATERIAL BOX SHADOW START ##############################*/
 
-    @if $level==1 {
-        box-shadow: 0 1px 3px var(--color-shadow);
+@mixin box_shadow ($level, $side) {
+
+    @if $side=='bottom' {
+        @if $level==1 {
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        @else if $level==2 {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.12);
+        }
+
+        @else if $level==3 {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 5px 10px rgba(0, 0, 0, 0.14);
+        }
+
+        @else if $level==4 {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 17px rgba(0, 0, 0, 0.2);
+        }
+
+        @else if $level==5 {
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 22px rgba(0, 0, 0, 0.24);
+        }
     }
 
-    @else if $level==2 {
-        box-shadow: 0 3px 6px var(--color-shadow);
+    @if $side=='left' {
+        @if $level==1 {
+            box-shadow: 2px 0 3px rgba(0, 0, 0, 0.12), 1px 0 3px rgba(0, 0, 0, 0.08);
+        }
+
+        @else if $level==2 {
+            box-shadow: 3px 0 6px rgba(0, 0, 0, 0.16), 2px 0 4px rgba(0, 0, 0, 0.12);
+        }
+
+        @else if $level==3 {
+            box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 5px 0 10px rgba(0, 0, 0, 0.14);
+        }
+
+        @else if $level==4 {
+            box-shadow: 14px 0 28px rgba(0, 0, 0, 0.25), 10px 0 17px rgba(0, 0, 0, 0.2);
+        }
+
+        @else if $level==5 {
+            box-shadow: 19px 0 38px rgba(0, 0, 0, 0.30), 15px 0 22px rgba(0, 0, 0, 0.24);
+        }
     }
 
-    @else if $level==3 {
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    @if $side=='top' {
+        @if $level==1 {
+            box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.12), 0 -1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        @else if $level==2 {
+            box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.16), 0 -2px 4px rgba(0, 0, 0, 0.12);
+        }
+
+        @else if $level==3 {
+            box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.19), 0 -5px 10px rgba(0, 0, 0, 0.14);
+        }
+
+        @else if $level==4 {
+            box-shadow: 0 -14px 28px rgba(0, 0, 0, 0.25), 0 -10px 17px rgba(0, 0, 0, 0.2);
+        }
+
+        @else if $level==5 {
+            box-shadow: 0 -19px 38px rgba(0, 0, 0, 0.30), 0 -15px 22px rgba(0, 0, 0, 0.24);
+        }
     }
 
-    @else if $level==4 {
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    @if $side=='right' {
+        @if $level==1 {
+            box-shadow: -2px 0 3px rgba(0, 0, 0, 0.12), -1px 0 3px rgba(0, 0, 0, 0.08);
+        }
+
+        @else if $level==2 {
+            box-shadow: -3px 0 6px rgba(0, 0, 0, 0.16), -2px 0 4px rgba(0, 0, 0, 0.12);
+        }
+
+        @else if $level==3 {
+            box-shadow: -10px 0 20px rgba(0, 0, 0, 0.19), -5px 0 10px rgba(0, 0, 0, 0.14);
+        }
+
+        @else if $level==4 {
+            box-shadow: -14px 0 28px rgba(0, 0, 0, 0.25), -10px 0 17px rgba(0, 0, 0, 0.2);
+        }
+
+        @else if $level==5 {
+            box-shadow: -19px 0 38px rgba(0, 0, 0, 0.30), -15px 0 22px rgba(0, 0, 0, 0.24);
+        }
     }
 
-    @else if $level==5 {
-        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    @if $side=='middle' {
+        @if $level==1 {
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.12), 0 0 3px rgba(0, 0, 0, 0.08);
+        }
+
+        @else if $level==2 {
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 0 4px rgba(0, 0, 0, 0.12);
+        }
+
+        @else if $level==3 {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.19), 0 0 10px rgba(0, 0, 0, 0.14);
+        }
+
+        @else if $level==4 {
+            box-shadow: 0 0 28px rgba(0, 0, 0, 0.25), 0 0 17px rgba(0, 0, 0, 0.2);
+        }
+
+        @else if $level==5 {
+            box-shadow: 0 0 38px rgba(0, 0, 0, 0.30), 0 0 22px rgba(0, 0, 0, 0.24);
+        }
     }
 
 }
+
+/*################ MIXIN MATERIAL BOX SHADOW END ###############################################################*/
 
 // ABSOLUTE ELEMENTS
 

@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/*######################### MIXIN MATERIAL BOX SHADOW START ##############################*/
+/*################ MIXIN MATERIAL BOX SHADOW END ###############################################################*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*------------------------------------------------*/
 /*                     RESET                      */
 /*------------------------------------------------*/
@@ -63,6 +71,121 @@ p {
   font-size: 1rem;
   font-size: clamp(1rem, 0.9277734977rem + 0.3081664099vw, 1.125rem);
   font-weight: 500;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: left;
+  }
+  25% {
+    background-position: center;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: center;
+  }
+  100% {
+    background-position: left;
+  }
+}
+@-moz-keyframes rainbow {
+  0% {
+    background-position: left;
+  }
+  25% {
+    background-position: center;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: center;
+  }
+  100% {
+    background-position: left;
+  }
+}
+@-ms-keyframes rainbow {
+  0% {
+    background-position: left;
+  }
+  25% {
+    background-position: center;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: center;
+  }
+  100% {
+    background-position: left;
+  }
+}
+@-o-keyframes rainbow {
+  0% {
+    background-position: left;
+  }
+  25% {
+    background-position: center;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: center;
+  }
+  100% {
+    background-position: left;
+  }
+}
+@keyframes rainbow {
+  0% {
+    background-position: left;
+  }
+  25% {
+    background-position: center;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: center;
+  }
+  100% {
+    background-position: left;
+  }
+}
+.header {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+.headerLogo {
+  background: linear-gradient(to right, #9356dc, #ff79da, #99e2d0);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: black;
+  transition: color 0.4s ease-in-out;
+  -webkit-animation: rainbow 3s ease-in-out infinite;
+  -moz-animation: rainbow 3s ease-in-out infinite;
+  -ms-animation: rainbow 3s ease-in-out infinite;
+  -o-animation: rainbow 3s ease-in-out infinite;
+  animation: rainbow 3s ease-in-out infinite;
+}
+.headerLogo:hover {
+  color: rgba(0, 0, 0, 0);
+}
+.headerLink {
+  position: absolute;
+  top: 50%;
+  left: 3.5%;
+  transform: translate(50%, -50%);
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.6388674884rem + 1.5408320493vw, 1.625rem);
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */

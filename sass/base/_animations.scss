@@ -1,0 +1,21 @@
+@include keyframes(rainbow) {
+    0% {
+        background-position: left;
+    }
+
+    25% {
+        background-position: center;
+    }
+
+    50% {
+        background-position: right;
+    }
+
+    75% {
+        background-position: center;
+    }
+
+    100% {
+        background-position: left;
+    }
+}
