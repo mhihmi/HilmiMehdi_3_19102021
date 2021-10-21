@@ -226,6 +226,15 @@ $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
     transform: translate($x, $y);
 }
 
+@mixin pseudo-el ($top, $right, $bottom, $left) {
+    position: absolute;
+    content: "";
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
 // TEXT SHORTENING
 
 // Default line-clamp is 1
@@ -302,6 +311,16 @@ $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
     @else if $orientation=='horizontal' {
         background: -webkit-linear-gradient(left, $start-color, $end-color);
         background: linear-gradient(to right, $start-color, $end-color);
+    }
+
+    @else if $orientation=='175deg' {
+        background: -webkit-linear-gradient(175deg, $start-color, $end-color);
+        background: linear-gradient(175deg, $start-color, $end-color);
+    }
+
+    @else if $orientation=='185deg' {
+        background: -webkit-linear-gradient(185deg, $start-color, $end-color);
+        background: linear-gradient(185deg, $start-color, $end-color);
     }
 
     @else {

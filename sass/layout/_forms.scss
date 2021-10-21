@@ -9,6 +9,7 @@
         @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(16px), calculateRem(18px));
         @include padding(calculateRem(19px), null, calculateRem(15px), calculateRem(10px));
         width: calculateRem(135px);
+        letter-spacing: 0.01em;
     }
 
     &__iconMarker {

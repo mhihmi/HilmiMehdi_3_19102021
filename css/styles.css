@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*######################### MIXIN MATERIAL BOX SHADOW START ##############################*/
 /*################ MIXIN MATERIAL BOX SHADOW END ###############################################################*/
-.locationForm, .header {
+.hero, .locationForm, .header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,6 +96,9 @@ p {
   font-weight: 500;
 }
 
+/*------------------------------------------------*/
+/*                     ANIM'S                 */
+/*------------------------------------------------*/
 @-webkit-keyframes rainbow {
   0% {
     background-position: left;
@@ -181,6 +184,9 @@ p {
     background-position: left;
   }
 }
+/*------------------------------------------------*/
+/*                     HEADER                     */
+/*------------------------------------------------*/
 .header {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
   position: relative;
@@ -189,10 +195,9 @@ p {
   background: linear-gradient(to right, #9356dc, #ff79da, #99e2d0);
   background-size: 300% 300%;
   background-clip: text;
-  padding-top: 0.625rem;
-  padding-right: 0.625rem;
-  padding-bottom: 0.625rem;
-  padding-left: 0.625rem;
+  padding: 0.625rem;
+  margin-top: 0.8125rem;
+  margin-bottom: 0.1875rem;
   -webkit-background-clip: text;
   color: black;
   transition: color 0.4s ease-in-out;
@@ -237,10 +242,70 @@ p {
   padding-bottom: 0.9375rem;
   padding-left: 0.625rem;
   width: 8.4375rem;
+  letter-spacing: 0.01em;
 }
 .locationForm__iconMarker {
   font-size: 1rem;
   font-size: clamp(1rem, 0.6388674884rem + 1.5408320493vw, 1.625rem);
+}
+
+/*------------------------------------------------*/
+/*                     HOMEPAGE                   */
+/*------------------------------------------------*/
+.hero {
+  flex-flow: column wrap;
+  row-gap: 0.9375rem;
+  text-align: center;
+  padding: 2.6875rem 1.875rem 2.9375rem 1.875rem;
+  background-color: #f6f6f6;
+}
+.hero__title {
+  padding-right: 1.875rem;
+}
+.hero__subtitle {
+  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 1.0166602465rem + 0.4622496148vw, 1.3125rem);
+  font-weight: 400;
+}
+.hero__cta {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.9277734977rem + 0.3081664099vw, 1.125rem);
+  font-weight: 500;
+  margin: 0.75rem auto;
+  padding: 1.125em 1.375em 1em 1.375em;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 121, 218, 0.9);
+  background: -webkit-linear-gradient(175deg, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+  background: linear-gradient(175deg, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+  position: relative;
+  z-index: 1;
+}
+.hero__cta:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 5px 10px rgba(0, 0, 0, 0.14);
+  transition: transform 300ms, box-shadow 300ms;
+}
+.hero__cta:hover::after {
+  opacity: 1;
+}
+.hero__cta::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50px;
+  background: #ff93e1;
+  background: -webkit-linear-gradient(185deg, #ff93e1, #a16be0);
+  background: linear-gradient(185deg, #ff93e1, #a16be0);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 300ms;
 }
 
 /*# sourceMappingURL=styles.css.map */
