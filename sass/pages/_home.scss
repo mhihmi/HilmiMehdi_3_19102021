@@ -16,25 +16,41 @@
 
     &__subtitle {
         @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(18px), calculateRem(21px));
-        // @include margin(calculateRem(15px), null, calculateRem(15px), null);
+        // @include margin(calculateRem(15px), null, calculateRem(15px), null);  cf.row-gap
         font-weight: 400;
     }
 
     &__cta {
-        @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(16px), calculateRem(18px));
-        font-weight: 500;
         margin: calculateRem(12px) auto;
-        padding: 1.125em 1.375em 1em 1.375em; // em pour que le bouton d'adapte au font défini
-        border: none;
-        border-radius: 50px;
-        color: #fff;
-        @include box-shadow(2, bottom);
-        @include background-gradient(rgba($color-secondary, 90%), rgba($color-primary, 90%), '175deg');
+    }
+}
+
+.mainManual {
+    margin: calculateRem(45px) auto;
+}
+
+.manualTitle {
+    text-indent: calculateRem(20px);
+}
+
+.manualList {
+    margin: calculateRem(25px) auto;
+    @extend %flex-jc-c;
+    flex-flow: column wrap;
+    row-gap: calculateRem(25px);
+    @include linx(black, black, $color-primary, $color-primary);
+
+    &__item {
         position: relative;
-        z-index: 1;
+        background: $color-bg-primary;
+        border-radius: 20px;
+        @include padding(calculateEm(30px), calculateEm(35px), calculateEm(24px), calculateEm(35px));
+        @extend %flex-ai-c;
+        @include box-shadow(1, bottom);
+        width: 100%;
+        min-width: 320px;
 
         &:hover {
-            cursor: pointer;
             transform: scale(1.05);
             @include box-shadow(3, bottom);
             transition: transform 300ms, box-shadow 300ms;
@@ -42,16 +58,46 @@
             &::after {
                 opacity: 1;
             }
+
+            .manualList__icon {
+                color: $color-primary;
+            }
         }
 
         &::after {
-            @include pseudo-el (0, 0, 0, 0);
-            border-radius: 50px;
-            @include background-gradient(lighten($color-secondary, 5), lighten($color-primary, 5), '185deg');
+            @include pseudo-el(0, 0, 0, 0);
+            background: rgba($color-primary, 10%);
+            border-radius: 20px;
             opacity: 0;
             z-index: -1;
             transition: opacity 300ms;
         }
     }
 
+    &__icon {
+        @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(18px), calculateRem(22px));
+        padding: 0 calculateEm(6px);
+        margin-right: calculateRem(20px);
+        background: transparent !important;
+        text-align: center;
+        color: darken($color-bg-secondary, 42.5);
+    }
+
+    .-fsUp {
+        @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(20px), calculateRem(24px));
+        padding-left: calculateEm(8px);
+    }
+
+    &__nbr {
+        @include absolute-el (53%, null, null, -9%, 50%, -50%);
+        padding: calculateEm(6px) calculateEm(12px);
+        border-radius: 50%;
+        background: $color-primary;
+        color: #fff;
+        @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(14px), calculateRem(16px));
+    }
+
+    .-active {
+        background: rgba($color-primary, 10%);
+    }
 }

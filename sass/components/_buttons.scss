@@ -1,0 +1,36 @@
+/*------------------------------------------------*/
+/*                     BUTTONS                   */
+/*------------------------------------------------*/
+
+.-buttonModel {
+    @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(16px), calculateRem(18px));
+    font-weight: 500;
+    padding: 1.125em 1.375em 1em 1.375em; // em pour que le bouton s'adapte au font défini
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    @include box-shadow(2, bottom);
+    @include background-gradient(rgba($color-secondary, 90%), rgba($color-primary, 90%), '175deg');
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        @include box-shadow(3, bottom);
+        transition: transform 300ms, box-shadow 300ms;
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        @include pseudo-el(0, 0, 0, 0);
+        border-radius: 50px;
+        @include background-gradient(lighten($color-secondary, 5), lighten($color-primary, 5), '185deg');
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 300ms;
+    }
+}
