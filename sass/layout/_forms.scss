@@ -1,0 +1,17 @@
+.locationForm {
+    background-color: $color-bg-secondary;
+    @extend %flex-jc-c;
+
+    &__text {
+        border: none;
+        outline: none;
+        background: transparent;
+        @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(16px), calculateRem(18px));
+        @include padding(calculateRem(19px), null, calculateRem(15px), calculateRem(10px));
+        width: calculateRem(135px);
+    }
+
+    &__iconMarker {
+        @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(16px), calculateRem(26px));
+    }
+}

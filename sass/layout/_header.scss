@@ -7,7 +7,7 @@
         background: linear-gradient(to right, $color-primary, $color-secondary, $color-tertiary);
         background-size: 300% 300%;
         background-clip: text;
-        @include padding (calculateRem(10px), calculateRem(10px), calculateRem(10px), calculateRem(10px));
+        @include padding(calculateRem(10px), calculateRem(10px), calculateRem(10px), calculateRem(10px));
         -webkit-background-clip: text;
         color: rgba(0, 0, 0, 1);
         transition: color .4s ease-in-out;
