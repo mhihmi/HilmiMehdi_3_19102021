@@ -1,6 +1,12 @@
 @charset "UTF-8";
 /*######################### MIXIN MATERIAL BOX SHADOW START ##############################*/
 /*################ MIXIN MATERIAL BOX SHADOW END ###############################################################*/
+.card__caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .manualList, .hero, .locationForm, .header {
   display: flex;
   justify-content: center;
@@ -92,7 +98,7 @@ h2 {
 h3 {
   font-size: 1.125rem;
   font-size: clamp(1.125rem, 0.9805469954rem + 0.6163328197vw, 1.375rem);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 p {
@@ -298,6 +304,62 @@ p {
 }
 
 /*------------------------------------------------*/
+/*                         CARDS                  */
+/*------------------------------------------------*/
+.card {
+  width: 100%;
+  max-width: 43.75rem;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.12);
+  transition: transform 300ms, box-shadow 300ms;
+}
+.card__img {
+  width: 100%;
+  height: 46.5vw;
+  max-height: 18.75rem;
+  object-fit: cover;
+  object-position: 50% bottom;
+}
+.card__flag {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  transform: translate(, );
+  padding: 0.375em 0.625em;
+  border-radius: 5px;
+  background-color: #99e2d0;
+  color: #008766;
+  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 0.8027734977rem + 0.3081664099vw, 1rem);
+  font-weight: 500;
+}
+.card__caption {
+  padding-top: 0.9375rem;
+  padding-right: 0.875rem;
+  padding-bottom: 0.9375rem;
+  padding-left: 0.875rem;
+}
+.card__title {
+  margin-bottom: 0.125rem;
+}
+.card__location {
+  font-weight: 400;
+}
+.card__icon {
+  font-size: 1.375rem;
+  font-size: clamp(1.375rem, 1.3027734977rem + 0.3081664099vw, 1.5rem);
+  padding-right: 0.1875rem;
+  padding-bottom: 0.625rem;
+}
+
+/*------------------------------------------------*/
 /*                     HOMEPAGE                   */
 /*------------------------------------------------*/
 .hero {
@@ -342,7 +404,7 @@ p {
 .manualList a:hover {
   color: #9356dc;
   font-weight: 600;
-  transition: 300ms;
+  transition: all 0.3s ease-in;
 }
 .manualList a:active {
   color: #9356dc;
@@ -415,11 +477,39 @@ p {
 }
 
 .mainRestaurants {
-  margin: 3.6875rem auto;
+  background-color: #f6f6f6;
+  padding-top: 3.6875rem;
+  padding-bottom: 3.6875rem;
 }
 
 .restaurantsTitle {
   text-indent: 1.25rem;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 5vw;
+  margin: 1.25rem 1.25rem 0.5rem 1.25rem;
+}
+.cardsContainer a {
+  color: black;
+  text-decoration: none;
+}
+.cardsContainer a:visited {
+  color: black;
+}
+.cardsContainer a:hover {
+  color: black;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+.cardsContainer a:active {
+  color: black;
+  font-weight: 600;
+}
+.cardsContainer__link:nth-child(2) img {
+  object-position: 50% 61%;
 }
 
 /*# sourceMappingURL=styles.css.map */

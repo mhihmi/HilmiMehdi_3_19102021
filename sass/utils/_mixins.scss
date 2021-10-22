@@ -85,7 +85,7 @@ $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
         &:hover {
             color: $hover;
             font-weight: 600;
-            transition: 300ms;
+            transition: all .3s ease-in;
         }
 
         &:active {

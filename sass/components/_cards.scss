@@ -1,0 +1,55 @@
+/*------------------------------------------------*/
+/*                         CARDS                  */
+/*------------------------------------------------*/
+
+.card {
+    width: 100%;
+    max-width: calculateRem(700px);
+    border-radius: 15px;
+    background-color: #fff;
+    @include box-shadow(1, bottom);
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        transform: scale(1.02);
+        @include box-shadow(2, bottom);
+        transition: transform 300ms, box-shadow 300ms;
+    }
+
+    &__img {
+        width: 100%;
+        height: 46.5vw;
+        max-height: calculateRem(300px);
+        object-fit: cover;
+        object-position: 50% bottom;
+    }
+
+    &__flag {
+        @include absolute-el (4%, 4%, null, null, null, null);
+        padding: calculateEm(6px) calculateEm(10px);
+        border-radius: 5px;
+        background-color: rgb(153, 226, 208);
+        color: rgb(0, 135, 102);
+        @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(14px), calculateRem(16px));
+        font-weight: 500;
+    }
+
+    &__caption {
+        @extend %flex-jc-sb;
+        @include padding(calculateRem(15px), calculateRem(14px), calculateRem(15px), calculateRem(14px));
+    }
+
+    &__title {
+        margin-bottom: calculateRem(2px);
+    }
+
+    &__location {
+        font-weight: 400;
+    }
+
+    &__icon {
+        @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(22px), calculateRem(24px));
+        @include padding(null, calculateRem(3px), calculateRem(10px), null);
+    }
+}
