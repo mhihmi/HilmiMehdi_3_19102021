@@ -414,4 +414,12 @@ p {
   background: rgba(147, 86, 220, 0.1);
 }
 
+.mainRestaurants {
+  margin: 3.6875rem auto;
+}
+
+.restaurantsTitle {
+  text-indent: 1.25rem;
+}
+
 /*# sourceMappingURL=styles.css.map */

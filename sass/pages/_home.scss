@@ -1,7 +1,7 @@
 /*------------------------------------------------*/
 /*                     HOMEPAGE                   */
 /*------------------------------------------------*/
-
+// Jumbotron
 .hero {
     @extend %flex-jc-c;
     flex-flow: column wrap;
@@ -25,6 +25,7 @@
     }
 }
 
+// Section Manual
 .mainManual {
     margin: calculateRem(45px) auto;
 }
@@ -100,4 +101,13 @@
     .-active {
         background: rgba($color-primary, 10%);
     }
+}
+
+//Section Restaurants
+.mainRestaurants {
+    margin: calculateRem(59px) auto;
+}
+
+.restaurantsTitle {
+    text-indent: calculateRem(20px);
 }

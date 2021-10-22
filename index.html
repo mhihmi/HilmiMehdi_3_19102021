@@ -29,7 +29,7 @@
     <header class="header">
         <h1 class="headerLogo">ohmyfood</h1>
     </header>
-    <main class="main">
+    <main class="mainHome">
         <div class="mainJumbotron">
             <form action="/" method="post" class="locationForm">
                 <div class="locationForm__group">
@@ -66,9 +66,79 @@
                 </a>
             </ul>
         </section>
-        <section class="mainRestaurants"></section>
+        <section class="mainRestaurants">
+            <h2 class="restaurantsTitle">Restaurants</h2>
+            <div class="cardsContainer">
+                <a href="./pages/la_palette_du_gout.html" class="cardsContainer__link">
+                    <figure class="card">
+                        <img src="./img/restaurants/laPaletteDuGout.jpg" alt="Repas au Restaurant La Palette du Goût"
+                            class="card__plate">
+                        <span class="card__flag">Nouveau</span>
+                        <figcaption class="card__caption">
+                            <div class="card__textBox">
+                                <h3 class="card__title">La palette du goût</h3>
+                                <p class="card__location">Ménilmontant</p>
+                            </div>
+                            <i class="far fa-heart card__icon"></i>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="./pages/la_note_enchantee.html" class="cardsContainer__link">
+                    <figure class="card">
+                        <img src="./img/restaurants/laNoteEnchantee.jpg" alt="Repas au Restaurant La note enchantée"
+                            class="card__plate">
+                        <span class="card__flag">Nouveau</span>
+                        <figcaption class="card__caption">
+                            <div class="card__textBox">
+                                <h3 class="card__title">La note enchantée</h3>
+                                <p class="card__location">Charonne</p>
+                            </div>
+                            <i class="far fa-heart card__icon"></i>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="./pages/a_la_francaise.html" class="cardsContainer__link">
+                    <figure class="card">
+                        <img src="./img/restaurants/aLaFrancaise.jpg" alt="Repas au Restaurant À la française"
+                            class="card__plate">
+                        <figcaption class="card__caption">
+                            <div class="card__textBox">
+                                <h3 class="card__title">À la française</h3>
+                                <p class="card__location">Cité Rouge</p>
+                            </div>
+                            <i class="far fa-heart card__icon"></i>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="./pages/le_delice_des_sens.html" class="cardsContainer__link">
+                    <figure class="card">
+                        <img src="./img/restaurants/leDeliceDesSens.jpg" alt="Repas au Restaurant Le délice des sens"
+                            class="card__plate">
+                        <figcaption class="card__caption">
+                            <div class="card__textBox">
+                                <h3 class="card__title">Le délice des sens</h3>
+                                <p class="card__location">Folie-Méricourt</p>
+                            </div>
+                            <i class="far fa-heart card__icon"></i>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <img src="/img/logo/ohmyfood@2x.svg" alt="logo" class="footerLogo">
+        <nav class="footerNav">
+            <ul class="footerNav__list">
+                <li class="footerNav_listItem"><i class="fas fa-utensils footerNav__icon"></i>Proposer un restaurant
+                </li>
+                <li class="footerNav_listItem"><i class="fas fa-hands-helping footerNav__icon"></i>Devenir partenaire
+                </li>
+                <li class="footerNav_listItem">Mentions légales</li>
+                <li class="footerNav_listItem">Contact</li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 
 </html>
