@@ -290,6 +290,7 @@ p {
   font-size: 1rem;
   font-size: clamp(1rem, 0.9277734977rem + 0.3081664099vw, 1.125rem);
   font-weight: 700;
+  letter-spacing: -0.004em;
 }
 
 .locationForm {
@@ -562,6 +563,12 @@ p {
 }
 .cardsContainer__link:nth-child(2) img {
   object-position: 50% 61%;
+}
+
+.menuImg {
+  width: 100%;
+  height: 17.5rem;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */

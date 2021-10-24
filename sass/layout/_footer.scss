@@ -36,5 +36,6 @@
     &__links {
         @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(16px), calculateRem(18px));
         font-weight: 700;
+        letter-spacing: -0.004em;
     }
 }
