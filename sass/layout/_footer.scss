@@ -1,0 +1,40 @@
+.footer {
+    background-color: $color-bg-footer;
+    color: #fff;
+    padding: calculateRem(26px) calculateRem(25px);
+
+    &Logo {
+        height: calculateRem(18px);
+
+        path {
+            fill: #fff;
+        }
+    }
+
+}
+
+.footerNav {
+    margin-top: calculateRem(18px);
+    @include linx(#fff, #fff, #fff, #fff);
+
+    &__list {
+        display: flex;
+        flex-flow: column wrap;
+        gap: calculateRem(12px);
+    }
+
+    &__listItem:first-child {
+        padding-left: calculateEm(3px);
+        padding-right: calculateEm(3px);
+    }
+
+    &__icon {
+        @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(13px), calculateRem(16px));
+        @include margin(null, calculateRem(10px), calculateRem(2px), null);
+    }
+
+    &__links {
+        @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(16px), calculateRem(18px));
+        font-weight: 700;
+    }
+}

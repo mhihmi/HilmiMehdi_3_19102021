@@ -240,6 +240,58 @@ p {
   fill: url(#linear);
 }
 
+.footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 1.625rem 1.5625rem;
+}
+.footerLogo {
+  height: 1.125rem;
+}
+.footerLogo path {
+  fill: #fff;
+}
+
+.footerNav {
+  margin-top: 1.125rem;
+}
+.footerNav a {
+  color: #fff;
+  text-decoration: none;
+}
+.footerNav a:visited {
+  color: #fff;
+}
+.footerNav a:hover {
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+.footerNav a:active {
+  color: #fff;
+  font-weight: 600;
+}
+.footerNav__list {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.75rem;
+}
+.footerNav__listItem:first-child {
+  padding-left: 0.1875em;
+  padding-right: 0.1875em;
+}
+.footerNav__icon {
+  font-size: 0.8125rem;
+  font-size: clamp(0.8125rem, 0.7041602465rem + 0.4622496148vw, 1rem);
+  margin-right: 0.625rem;
+  margin-bottom: 0.125rem;
+}
+.footerNav__links {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.9277734977rem + 0.3081664099vw, 1.125rem);
+  font-weight: 700;
+}
+
 .locationForm {
   background-color: #eaeaea;
 }
