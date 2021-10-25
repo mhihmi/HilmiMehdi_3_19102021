@@ -28,6 +28,12 @@
     align-items: baseline;
 }
 
+%flex-ai-bl-jc-sb {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
 // %text-overflow {
 //     overflow: hidden;
 //     white-space: nowrap;

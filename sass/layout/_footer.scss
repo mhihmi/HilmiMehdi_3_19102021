@@ -10,7 +10,10 @@
             fill: #fff;
         }
     }
+}
 
+.-toTop {
+    margin-top: calculateRem(-60px);
 }
 
 .footerNav {

@@ -18,6 +18,12 @@
   align-items: center;
 }
 
+.menuHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 /*------------------------------------------------*/
 /*                     RESET                      */
 /*------------------------------------------------*/
@@ -98,6 +104,12 @@ h2 {
 h3 {
   font-size: 1.125rem;
   font-size: clamp(1.125rem, 0.9805469954rem + 0.6163328197vw, 1.375rem);
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 1.0527734977rem + 0.3081664099vw, 1.25rem);
   font-weight: 700;
 }
 
@@ -250,6 +262,10 @@ p {
 }
 .footerLogo path {
   fill: #fff;
+}
+
+.-toTop {
+  margin-top: -3.75rem;
 }
 
 .footerNav {
@@ -565,10 +581,85 @@ p {
   object-position: 50% 61%;
 }
 
-.menuImg {
+.menuLayout__img {
   width: 100%;
   height: 17.5rem;
   object-fit: cover;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  border-radius: 2.375rem 2.375rem 0 0;
+  transform: translateY(-60px);
+  padding: 2.1875rem 0.75rem 0.875rem 0.875rem;
+}
+.menuHeader__title {
+  font-family: "Shrikhand", sans-serif;
+  text-indent: 0.25rem;
+  font-size: 1.5625rem;
+  font-size: clamp(1.5625rem, 1.4541602465rem + 0.4622496148vw, 1.75rem);
+}
+.menuHeader__icon {
+  font-size: 1.3125rem;
+  font-size: clamp(1.3125rem, 1.2402734977rem + 0.3081664099vw, 1.4375rem);
+  padding-right: 1.5625rem;
+}
+.menuBox {
+  margin-top: 2.25rem;
+}
+.menuBox__title {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.9277734977rem + 0.3081664099vw, 1.125rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-indent: 0.4375rem;
+  position: relative;
+}
+.menuBox__title::after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 7px;
+  background-color: #99e2d0;
+  height: 0.1875rem;
+  width: 2.5rem;
+}
+.menuBox__list {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.875rem;
+  padding: 0.875rem 0;
+}
+.menuBox__item {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 0.9375rem 1.5rem 0.8125rem 0.75rem;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.menuBox__item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 5px 10px rgba(0, 0, 0, 0.14);
+  transition: transform 300ms, box-shadow 300ms;
+}
+.menuBox__textDescription {
+  margin-top: 0.1875rem;
+  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.8291602465rem + 0.4622496148vw, 1.125rem);
+  font-weight: 400;
+  letter-spacing: -0.008em;
+}
+.menuBox__price {
+  font-weight: bold;
+  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.8291602465rem + 0.4622496148vw, 1.125rem);
+}
+.menuBtn {
+  margin: 2.25rem auto;
+  display: block;
+  padding: 1.125em 3.125em 1.125em 3.125em;
 }
 
 /*# sourceMappingURL=styles.css.map */

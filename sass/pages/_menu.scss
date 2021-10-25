@@ -1,5 +1,90 @@
-.menuImg {
-    width: 100%;
-    height: calculateRem(280px);
-    object-fit: cover;
+.menuLayout {
+
+    &__img {
+        width: 100%;
+        height: calculateRem(280px);
+        object-fit: cover;
+    }
+}
+
+.menu {
+    background-color: $color-bg-primary;
+    border-radius: calculateRem(38px) calculateRem(38px) 0 0;
+    transform: translateY(-60px);
+    padding: calculateRem(35px) calculateRem(12px) calculateRem(14px) calculateRem(14px);
+
+    &Header {
+        @extend %flex-ai-bl-jc-sb;
+
+        &__title {
+            font-family: 'Shrikhand', sans-serif;
+            text-indent: calculateRem(4px);
+            @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(25px), calculateRem(28px));
+        }
+
+        &__icon {
+            @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(21px), calculateRem(23px));
+            padding-right: calculateRem(25px);
+        }
+    }
+
+    &Box {
+        margin-top: calculateRem(36px);
+
+        &__title {
+            @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(16px), calculateRem(18px));
+            font-weight: 400;
+            text-transform: uppercase;
+            text-indent: calculateRem(7px);
+            position: relative;
+
+            &::after {
+                @include pseudo-el(null, null, -3px, 7px);
+                background-color: $color-tertiary;
+                height: calculateRem(3px);
+                width: calculateRem(40px);
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-flow: column wrap;
+            gap: calculateRem(14px);
+            padding: calculateRem(14px) 0;
+        }
+
+        &__item {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: calculateRem(15px) calculateRem(24px) calculateRem(13px) calculateRem(12px);
+            @include box-shadow(1, bottom);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            &:hover {
+                transform: scale(1.02);
+                @include box-shadow(3, bottom);
+                transition: transform 300ms, box-shadow 300ms;
+            }
+        }
+
+        &__textDescription {
+            margin-top: calculateRem(3px);
+            @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(15px), calculateRem(18px));
+            font-weight: 400;
+            letter-spacing: -0.008em;
+        }
+
+        &__price {
+            font-weight: bold;
+            @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(15px), calculateRem(18px));
+        }
+    }
+
+    &Btn {
+        margin: calculateRem(36px) auto;
+        display: block;
+        padding: calculateEm(18px) calculateEm(50px) calculateEm(18px) calculateEm(50px);
+    }
 }

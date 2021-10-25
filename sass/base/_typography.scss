@@ -25,6 +25,12 @@ h3 {
     font-weight: 700; //Bold
 }
 
+h4 {
+    @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(18px), calculateRem(20px));
+    font-weight: 700; //Medium
+}
+
+
 p {
     @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(16px), calculateRem(18px));
     font-weight: 500; //Medium
