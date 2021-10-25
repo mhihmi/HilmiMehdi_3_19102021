@@ -63,10 +63,26 @@
             align-items: flex-end;
 
             &:hover {
-                transform: scale(1.02);
+                transform: scale(1.01);
                 @include box-shadow(3, bottom);
                 transition: transform 300ms, box-shadow 300ms;
             }
+        }
+
+        &__item:nth-child(1) {
+            @include animation('fadeIn 1s ease-in-out both');
+        }
+
+        &__item:nth-child(2) {
+            @include animation('fadeIn 1s ease-in-out both .2s');
+        }
+
+        &__item:nth-child(3) {
+            @include animation('fadeIn 1s ease-in-out both .4s');
+        }
+
+        &__item:nth-child(4) {
+            @include animation('fadeIn 1s ease-in-out both .6s');
         }
 
         &__textDescription {

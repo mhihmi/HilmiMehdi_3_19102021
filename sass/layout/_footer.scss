@@ -9,6 +9,24 @@
         path {
             fill: #fff;
         }
+
+        @include breakpoint-up(medium) {
+            height: calculateRem(24px);
+        }
+
+        @include breakpoint-up(large) {
+            height: calculateRem(28px);
+        }
+    }
+
+    @include breakpoint-up(medium) {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    @include breakpoint-up(large) {
+        justify-content: space-evenly;
     }
 }
 

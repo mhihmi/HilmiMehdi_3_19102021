@@ -207,6 +207,51 @@ p {
     background-position: left;
   }
 }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*------------------------------------------------*/
 /*                     HEADER                     */
 /*------------------------------------------------*/
@@ -235,7 +280,7 @@ p {
 }
 .headerLink {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 3.5%;
   transform: translate(50%, -50%);
   font-size: 1rem;
@@ -262,6 +307,28 @@ p {
 }
 .footerLogo path {
   fill: #fff;
+}
+@media (min-width: 40em) {
+  .footerLogo {
+    height: 1.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .footerLogo {
+    height: 1.75rem;
+  }
+}
+@media (min-width: 40em) {
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 64em) {
+  .footer {
+    justify-content: space-evenly;
+  }
 }
 
 .-toTop {
@@ -427,6 +494,11 @@ p {
   padding-right: 0.1875rem;
   padding-bottom: 0.625rem;
 }
+@media (min-width: 40em) {
+  .card {
+    min-width: 28.25rem;
+  }
+}
 
 /*------------------------------------------------*/
 /*                     HOMEPAGE                   */
@@ -456,6 +528,11 @@ p {
 
 .manualTitle {
   text-indent: 1.25rem;
+}
+@media (min-width: 64em) {
+  .manualTitle {
+    text-align: center;
+  }
 }
 
 .manualList {
@@ -544,6 +621,13 @@ p {
 .manualList .-active {
   background: rgba(147, 86, 220, 0.1);
 }
+@media (min-width: 64em) {
+  .manualList {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    max-width: 1200px;
+  }
+}
 
 .mainRestaurants {
   background-color: #f6f6f6;
@@ -554,11 +638,16 @@ p {
 .restaurantsTitle {
   text-indent: 1.25rem;
 }
+@media (min-width: 64em) {
+  .restaurantsTitle {
+    text-align: center;
+  }
+}
 
 .cardsContainer {
   display: flex;
   flex-flow: column wrap;
-  row-gap: 5vw;
+  gap: 5vw;
   margin: 1.25rem 1.25rem 0.5rem 1.25rem;
 }
 .cardsContainer a {
@@ -579,6 +668,18 @@ p {
 }
 .cardsContainer__link:nth-child(2) img {
   object-position: 50% 61%;
+}
+@media (min-width: 40em) {
+  .cardsContainer {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 64em) {
+  .cardsContainer {
+    max-width: 1200px;
+    margin: 1.5rem auto;
+  }
 }
 
 .menuLayout__img {
@@ -640,9 +741,37 @@ p {
   align-items: flex-end;
 }
 .menuBox__item:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 5px 10px rgba(0, 0, 0, 0.14);
   transition: transform 300ms, box-shadow 300ms;
+}
+.menuBox__item:nth-child(1) {
+  -webkit-animation: fadeIn 1s ease-in-out both;
+  -moz-animation: fadeIn 1s ease-in-out both;
+  -ms-animation: fadeIn 1s ease-in-out both;
+  -o-animation: fadeIn 1s ease-in-out both;
+  animation: fadeIn 1s ease-in-out both;
+}
+.menuBox__item:nth-child(2) {
+  -webkit-animation: fadeIn 1s ease-in-out both .2s;
+  -moz-animation: fadeIn 1s ease-in-out both .2s;
+  -ms-animation: fadeIn 1s ease-in-out both .2s;
+  -o-animation: fadeIn 1s ease-in-out both .2s;
+  animation: fadeIn 1s ease-in-out both .2s;
+}
+.menuBox__item:nth-child(3) {
+  -webkit-animation: fadeIn 1s ease-in-out both .4s;
+  -moz-animation: fadeIn 1s ease-in-out both .4s;
+  -ms-animation: fadeIn 1s ease-in-out both .4s;
+  -o-animation: fadeIn 1s ease-in-out both .4s;
+  animation: fadeIn 1s ease-in-out both .4s;
+}
+.menuBox__item:nth-child(4) {
+  -webkit-animation: fadeIn 1s ease-in-out both .6s;
+  -moz-animation: fadeIn 1s ease-in-out both .6s;
+  -ms-animation: fadeIn 1s ease-in-out both .6s;
+  -o-animation: fadeIn 1s ease-in-out both .6s;
+  animation: fadeIn 1s ease-in-out both .6s;
 }
 .menuBox__textDescription {
   margin-top: 0.1875rem;

@@ -52,4 +52,8 @@
         @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(22px), calculateRem(24px));
         @include padding(null, calculateRem(3px), calculateRem(10px), null);
     }
+
+    @include breakpoint-up(medium) {
+        min-width: calculateRem(452px);
+    }
 }

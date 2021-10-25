@@ -32,6 +32,10 @@
 
 .manualTitle {
     text-indent: calculateRem(20px);
+
+    @include breakpoint-up(large) {
+        text-align: center;
+    }
 }
 
 .manualList {
@@ -101,6 +105,12 @@
     .-active {
         background: rgba($color-primary, 10%);
     }
+
+    @include breakpoint-up(large) {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        max-width: 1200px;
+    }
 }
 
 //Section Restaurants
@@ -111,17 +121,30 @@
 
 .restaurantsTitle {
     text-indent: calculateRem(20px);
+
+    @include breakpoint-up(large) {
+        text-align: center;
+    }
 }
 
 .cardsContainer {
     display: flex;
     flex-flow: column wrap;
-    // row-gap: calculateRem(18px);
-    row-gap: 5vw;
+    gap: 5vw;
     margin: calculateRem(20px) calculateRem(20px) calculateRem(8px) calculateRem(20px);
     @include linx(black, black, black, black);
 
     &__link:nth-child(2) img {
         object-position: 50% 61%;
+    }
+
+    @include breakpoint-up(medium) {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    @include breakpoint-up(large) {
+        max-width: 1200px;
+        margin: 1.5rem auto;
     }
 }
