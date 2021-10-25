@@ -536,7 +536,7 @@ p {
 }
 
 .manualList {
-  margin: 1.5625rem auto;
+  margin: 1.5625rem 1rem;
   flex-flow: column wrap;
   row-gap: 1.5625rem;
 }
@@ -561,12 +561,12 @@ p {
   background: #f6f6f6;
   border-radius: 20px;
   padding-top: 1.875em;
-  padding-right: 2.1875em;
+  padding-right: 1.875em;
   padding-bottom: 1.5em;
-  padding-left: 2.1875em;
+  padding-left: 1.875em;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
   width: 100%;
-  min-width: 320px;
+  min-width: 90vw;
 }
 .manualList__item:hover {
   transform: scale(1.05);
@@ -592,6 +592,17 @@ p {
   z-index: -1;
   transition: opacity 300ms;
 }
+@media (min-width: 40em) {
+  .manualList__item {
+    min-width: 60vw;
+  }
+}
+@media (min-width: 64em) {
+  .manualList__item {
+    min-width: min-content;
+    max-width: 325px;
+  }
+}
 .manualList__icon {
   font-size: 1.125rem;
   font-size: clamp(1.125rem, 0.9805469954rem + 0.6163328197vw, 1.375rem);
@@ -609,7 +620,7 @@ p {
 .manualList__nbr {
   position: absolute;
   top: 53%;
-  left: -9%;
+  left: -30px;
   transform: translate(50%, -50%);
   padding: 0.375em 0.75em;
   border-radius: 50%;
@@ -626,6 +637,7 @@ p {
     flex-flow: row wrap;
     justify-content: space-evenly;
     max-width: 1200px;
+    margin: 1.5625rem auto;
   }
 }
 

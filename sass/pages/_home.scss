@@ -39,7 +39,7 @@
 }
 
 .manualList {
-    margin: calculateRem(25px) auto;
+    margin: calculateRem(25px) calculateRem(16px);
     @extend %flex-jc-c;
     flex-flow: column wrap;
     row-gap: calculateRem(25px);
@@ -49,11 +49,11 @@
         position: relative;
         background: $color-bg-primary;
         border-radius: 20px;
-        @include padding(calculateEm(30px), calculateEm(35px), calculateEm(24px), calculateEm(35px));
+        @include padding(calculateEm(30px), calculateEm(30px), calculateEm(24px), calculateEm(30px));
         @extend %flex-ai-c;
         @include box-shadow(1, bottom);
         width: 100%;
-        min-width: 320px;
+        min-width: 90vw;
 
         &:hover {
             transform: scale(1.05);
@@ -77,6 +77,15 @@
             z-index: -1;
             transition: opacity 300ms;
         }
+
+        @include breakpoint-up(medium) {
+            min-width: 60vw;
+        }
+
+        @include breakpoint-up(large) {
+            min-width: min-content;
+            max-width: 325px;
+        }
     }
 
     &__icon {
@@ -94,7 +103,7 @@
     }
 
     &__nbr {
-        @include absolute-el (53%, null, null, -9%, 50%, -50%);
+        @include absolute-el (53%, null, null, -30px, 50%, -50%);
         padding: calculateEm(6px) calculateEm(12px);
         border-radius: 50%;
         background: $color-primary;
@@ -110,6 +119,7 @@
         flex-flow: row wrap;
         justify-content: space-evenly;
         max-width: 1200px;
+        margin: calculateRem(25px) auto;
     }
 }
 
