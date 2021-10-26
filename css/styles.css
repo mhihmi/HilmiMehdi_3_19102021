@@ -252,6 +252,146 @@ p {
     opacity: 1;
   }
 }
+@-webkit-keyframes feelIt {
+  0% {
+    fill-opacity: 0;
+  }
+  30% {
+    fill-opacity: 0.3;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  60% {
+    fill-opacity: 0.8;
+    transform: scale(1.05);
+    transform-origin: center;
+  }
+  75% {
+    fill-opacity: 0.05;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  90% {
+    fill-opacity: 0.8;
+    transform: scale(1.05);
+    transform-origin: center;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
+@-moz-keyframes feelIt {
+  0% {
+    fill-opacity: 0;
+  }
+  30% {
+    fill-opacity: 0.3;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  60% {
+    fill-opacity: 0.8;
+    transform: scale(1.05);
+    transform-origin: center;
+  }
+  75% {
+    fill-opacity: 0.05;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  90% {
+    fill-opacity: 0.8;
+    transform: scale(1.05);
+    transform-origin: center;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
+@-ms-keyframes feelIt {
+  0% {
+    fill-opacity: 0;
+  }
+  30% {
+    fill-opacity: 0.3;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  60% {
+    fill-opacity: 0.8;
+    transform: scale(1.05);
+    transform-origin: center;
+  }
+  75% {
+    fill-opacity: 0.05;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  90% {
+    fill-opacity: 0.8;
+    transform: scale(1.05);
+    transform-origin: center;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
+@-o-keyframes feelIt {
+  0% {
+    fill-opacity: 0;
+  }
+  30% {
+    fill-opacity: 0.3;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  60% {
+    fill-opacity: 0.8;
+    transform: scale(1.05);
+    transform-origin: center;
+  }
+  75% {
+    fill-opacity: 0.05;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  90% {
+    fill-opacity: 0.8;
+    transform: scale(1.05);
+    transform-origin: center;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
+@keyframes feelIt {
+  0% {
+    fill-opacity: 0;
+  }
+  30% {
+    fill-opacity: 0.3;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  60% {
+    fill-opacity: 0.8;
+    transform: scale(1.05);
+    transform-origin: center;
+  }
+  75% {
+    fill-opacity: 0.05;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  90% {
+    fill-opacity: 0.8;
+    transform: scale(1.05);
+    transform-origin: center;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
 /*------------------------------------------------*/
 /*                     HEADER                     */
 /*------------------------------------------------*/
@@ -397,7 +537,7 @@ p {
 }
 
 /*------------------------------------------------*/
-/*                     BUTTONS                   */
+/*                     BUTTONS                    */
 /*------------------------------------------------*/
 .-buttonModel {
   font-size: 1rem;
@@ -437,6 +577,21 @@ p {
   opacity: 0;
   z-index: -1;
   transition: opacity 300ms;
+}
+
+.-heartBeat > svg.svg-inline--fa path {
+  stroke-width: 40px;
+  fill: transparent;
+  stroke: black;
+}
+.-heartBeat:hover > svg.svg-inline--fa path {
+  fill: url(#linearY);
+  fill-opacity: 0;
+  -webkit-animation: feelIt 1s linear infinite;
+  -moz-animation: feelIt 1s linear infinite;
+  -ms-animation: feelIt 1s linear infinite;
+  -o-animation: feelIt 1s linear infinite;
+  animation: feelIt 1s linear infinite;
 }
 
 /*------------------------------------------------*/
@@ -698,6 +853,17 @@ p {
   width: 100%;
   height: 17.5rem;
   object-fit: cover;
+}
+@media (min-width: 40em) {
+  .menuLayout__img {
+    object-position: 50% 70%;
+    height: 20.625rem;
+  }
+}
+@media (min-width: 64em) {
+  .menuLayout__img {
+    height: 24.875rem;
+  }
 }
 
 .menu {

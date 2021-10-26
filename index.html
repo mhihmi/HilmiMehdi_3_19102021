@@ -25,6 +25,23 @@
 </head>
 
 <body>
+    <!-- setting gradients for SVGs  -->
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="svg-settings">
+        <defs>
+            <linearGradient id="linear">
+                <stop class="linear-stop1" offset="0%"></stop>
+                <stop class="linear-stop2" offset="50%"></stop>
+                <stop class="linear-stop3" offset="100%"></stop>
+            </linearGradient>
+        </defs>
+        <defs>
+            <linearGradient id="linearY" x2="0%" y2="100%">
+                <stop class="linear-stop1" offset="0%"></stop>
+                <stop class="linear-stop2" offset="40%"></stop>
+                <stop class="linear-stop3" offset="100%"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
     <!-- HEADER -->
     <header class="header">
         <h1 class="headerLogo">ohmyfood</h1>
@@ -40,7 +57,7 @@
             <div class="hero">
                 <h2 class="hero__title">Réservez le menu qui vous convient</h2>
                 <p class="hero__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <button class="hero__cta -buttonModel">Explorer nos restaurants</button>
+                <a href="#restaurants"><button class="hero__cta -buttonModel">Explorer nos restaurants</button></a>
             </div>
         </div>
         <section class="mainManual">
@@ -67,7 +84,7 @@
             </ul>
         </section>
         <section class="mainRestaurants">
-            <h2 class="restaurantsTitle">Restaurants</h2>
+            <h2 class="restaurantsTitle" id="restaurants">Restaurants</h2>
             <div class="cardsContainer">
                 <a href="./pages/la_palette_du_gout.html" class="cardsContainer__link">
                     <figure class="card">
@@ -79,7 +96,7 @@
                                 <h3 class="card__title">La palette du goût</h3>
                                 <p class="card__location">Ménilmontant</p>
                             </div>
-                            <i class="far fa-heart card__icon"></i>
+                            <i class="fas fa-heart card__icon -heartBeat"></i>
                         </figcaption>
                     </figure>
                 </a>
@@ -93,7 +110,7 @@
                                 <h3 class="card__title">La note enchantée</h3>
                                 <p class="card__location">Charonne</p>
                             </div>
-                            <i class="far fa-heart card__icon"></i>
+                            <i class="fas fa-heart card__icon -heartBeat"></i>
                         </figcaption>
                     </figure>
                 </a>
@@ -106,7 +123,7 @@
                                 <h3 class="card__title">À la française</h3>
                                 <p class="card__location">Cité Rouge</p>
                             </div>
-                            <i class="far fa-heart card__icon"></i>
+                            <i class="fas fa-heart card__icon -heartBeat"></i>
                         </figcaption>
                     </figure>
                 </a>
@@ -119,7 +136,7 @@
                                 <h3 class="card__title">Le délice des sens</h3>
                                 <p class="card__location">Folie-Méricourt</p>
                             </div>
-                            <i class="far fa-heart card__icon"></i>
+                            <i class="fas fa-heart card__icon -heartBeat"></i>
                         </figcaption>
                     </figure>
                 </a>
@@ -165,7 +182,8 @@
                         partenaire</a>
                 </li>
                 <li class="footerNav__listItem"><a href="#" class="footerNav__links">Mentions légales</a></li>
-                <li class="footerNav__listItem"><a href="#" class="footerNav__links">Contact</a></li>
+                <li class="footerNav__listItem"><a href="mailto:contact@ohmyfood.com"
+                        class="footerNav__links">Contact</a></li>
             </ul>
         </nav>
     </footer>

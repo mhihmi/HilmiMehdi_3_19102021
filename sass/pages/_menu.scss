@@ -4,6 +4,15 @@
         width: 100%;
         height: calculateRem(280px);
         object-fit: cover;
+
+        @include breakpoint-up(medium) {
+            object-position: 50% 70%;
+            height: calculateRem(330px);
+        }
+
+        @include breakpoint-up(large) {
+            height: calculateRem(398px);
+        }
     }
 }
 

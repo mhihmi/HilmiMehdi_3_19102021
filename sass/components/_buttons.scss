@@ -1,5 +1,5 @@
 /*------------------------------------------------*/
-/*                     BUTTONS                   */
+/*                     BUTTONS                    */
 /*------------------------------------------------*/
 
 .-buttonModel {
@@ -34,3 +34,28 @@
         transition: opacity 300ms;
     }
 }
+
+.-heartBeat {
+
+    &>svg.svg-inline--fa path {
+        stroke-width: 40px;
+        fill: transparent;
+        stroke: black;
+    }
+
+    &:hover {
+
+        &>svg.svg-inline--fa path {
+            fill: url(#linearY);
+            fill-opacity: 0;
+            @include animation('feelIt 1s linear infinite');
+        }
+
+    }
+
+}
+
+// .fa-heart path {
+//     stroke-dasharray: 1550;
+//     stroke-dashoffset: 1550;
+// }

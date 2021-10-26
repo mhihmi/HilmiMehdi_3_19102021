@@ -33,6 +33,13 @@
                 <stop class="linear-stop3" offset="100%"></stop>
             </linearGradient>
         </defs>
+        <defs>
+            <linearGradient id="linearY" x2="0%" y2="100%">
+                <stop class="linear-stop1" offset="0%"></stop>
+                <stop class="linear-stop2" offset="40%"></stop>
+                <stop class="linear-stop3" offset="100%"></stop>
+            </linearGradient>
+        </defs>
     </svg>
     <!-- HEADER -->
     <header class="header">
@@ -40,12 +47,14 @@
         <h1 class="headerLogo">ohmyfood</h1>
     </header>
     <main class="menuLayout">
-        <img src="../img/restaurants/leDeliceDesSens.jpg" alt="Repas au Restaurant Le délice des sens"
+        <img srcset="../img/restaurants/leDeliceDesSens.jpg 1400w,
+        ../img/restaurants/leDeliceDesSens_ws.jpg 2560w" sizes="(min-width: 1024px) 2560px,
+       1400px" src="../img/restaurants/leDeliceDesSens.jpg" alt="Repas au Restaurant Le délice des sens"
             class="menuLayout__img">
         <section class="menu">
             <header class="menuHeader">
                 <h2 class="menuHeader__title">Le délice des sens</h2>
-                <i class="far fa-heart menuHeader__icon"></i>
+                <i class="fas fa-heart menuHeader__icon -heartBeat"></i>
             </header>
             <div class="menuContainer">
                 <article class="menuBox">
@@ -169,7 +178,8 @@
                         partenaire</a>
                 </li>
                 <li class="footerNav__listItem"><a href="#" class="footerNav__links">Mentions légales</a></li>
-                <li class="footerNav__listItem"><a href="#" class="footerNav__links">Contact</a></li>
+                <li class="footerNav__listItem"><a href="mailto:contact@ohmyfood.com"
+                        class="footerNav__links">Contact</a></li>
             </ul>
         </nav>
     </footer>
