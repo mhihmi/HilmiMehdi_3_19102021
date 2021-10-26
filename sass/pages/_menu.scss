@@ -12,6 +12,8 @@
     border-radius: calculateRem(38px) calculateRem(38px) 0 0;
     transform: translateY(-60px);
     padding: calculateRem(35px) calculateRem(12px) calculateRem(14px) calculateRem(14px);
+    max-width: 1200px;
+    margin: 0 auto;
 
     &Header {
         @extend %flex-ai-bl-jc-sb;
@@ -25,6 +27,14 @@
         &__icon {
             @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(21px), calculateRem(23px));
             padding-right: calculateRem(25px);
+        }
+    }
+
+    &Container {
+        @include breakpoint-up(large) {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
         }
     }
 
@@ -60,12 +70,15 @@
             @include box-shadow(1, bottom);
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
 
             &:hover {
                 transform: scale(1.01);
                 @include box-shadow(3, bottom);
                 transition: transform 300ms, box-shadow 300ms;
+            }
+
+            @include breakpoint-up(large) {
+                flex-basis: 7rem;
             }
         }
 
@@ -93,8 +106,13 @@
         }
 
         &__price {
+            align-self: flex-end;
             font-weight: bold;
             @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(15px), calculateRem(18px));
+        }
+
+        @include breakpoint-up(large) {
+            flex-basis: 30%;
         }
     }
 

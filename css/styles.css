@@ -705,6 +705,8 @@ p {
   border-radius: 2.375rem 2.375rem 0 0;
   transform: translateY(-60px);
   padding: 2.1875rem 0.75rem 0.875rem 0.875rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .menuHeader__title {
   font-family: "Shrikhand", sans-serif;
@@ -716,6 +718,13 @@ p {
   font-size: 1.3125rem;
   font-size: clamp(1.3125rem, 1.2402734977rem + 0.3081664099vw, 1.4375rem);
   padding-right: 1.5625rem;
+}
+@media (min-width: 64em) {
+  .menuContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
 }
 .menuBox {
   margin-top: 2.25rem;
@@ -750,12 +759,16 @@ p {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
 }
 .menuBox__item:hover {
   transform: scale(1.01);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 5px 10px rgba(0, 0, 0, 0.14);
   transition: transform 300ms, box-shadow 300ms;
+}
+@media (min-width: 64em) {
+  .menuBox__item {
+    flex-basis: 7rem;
+  }
 }
 .menuBox__item:nth-child(1) {
   -webkit-animation: fadeIn 1s ease-in-out both;
@@ -793,9 +806,15 @@ p {
   letter-spacing: -0.008em;
 }
 .menuBox__price {
+  align-self: flex-end;
   font-weight: bold;
   font-size: 0.9375rem;
   font-size: clamp(0.9375rem, 0.8291602465rem + 0.4622496148vw, 1.125rem);
+}
+@media (min-width: 64em) {
+  .menuBox {
+    flex-basis: 30%;
+  }
 }
 .menuBtn {
   margin: 2.25rem auto;
