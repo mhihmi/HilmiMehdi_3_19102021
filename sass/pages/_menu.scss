@@ -35,7 +35,7 @@
 
         &__icon {
             @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(21px), calculateRem(23px));
-            padding-right: calculateRem(25px);
+            padding-right: 3%;
         }
     }
 
@@ -70,6 +70,14 @@
             flex-flow: column wrap;
             gap: calculateRem(14px);
             padding: calculateRem(14px) 0;
+
+            @include breakpoint-up(medium) {
+                margin-top: calculateRem(10px);
+            }
+
+            @include breakpoint-up(large) {
+                margin-top: calculateRem(20px);
+            }
         }
 
         &__item {
@@ -79,11 +87,26 @@
             @include box-shadow(1, bottom);
             display: flex;
             justify-content: space-between;
+            overflow: hidden;
 
             &:hover {
+                cursor: pointer;
                 transform: scale(1.01);
                 @include box-shadow(3, bottom);
                 transition: transform 300ms, box-shadow 300ms;
+
+                .menuBox__checkbox {
+                    flex-basis: 17%;
+                    transform: translateX(0%);
+                }
+
+                .menuBox__checkbox i {
+                    transform: rotate(0deg);
+                }
+            }
+
+            &:nth-child(-n+4) {
+                @include animation('fadeIn 1s ease-in-out both');
             }
 
             @include breakpoint-up(large) {
@@ -91,20 +114,10 @@
             }
         }
 
-        &__item:nth-child(1) {
-            @include animation('fadeIn 1s ease-in-out both');
-        }
-
-        &__item:nth-child(2) {
-            @include animation('fadeIn 1s ease-in-out both .2s');
-        }
-
-        &__item:nth-child(3) {
-            @include animation('fadeIn 1s ease-in-out both .4s');
-        }
-
-        &__item:nth-child(4) {
-            @include animation('fadeIn 1s ease-in-out both .6s');
+        @for $i from 1 to 5 {
+            :nth-child(#{$i}) {
+                animation-delay: $i * 0.2s;
+            }
         }
 
         &__textDescription {
@@ -114,10 +127,36 @@
             letter-spacing: -0.008em;
         }
 
+        &__text {
+            @include text-shorten(2);
+            flex: 1;
+        }
+
         &__price {
             align-self: flex-end;
             font-weight: bold;
             @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(15px), calculateRem(18px));
+        }
+
+        &__checkbox {
+            @extend %flex-jc-c;
+            background-color: $color-tertiary;
+            transform: translateX(100%);
+            flex-basis: 0%;
+            border-radius: 0 15px 15px 0;
+            margin: calculateRem(-15px) calculateRem(-24px) calculateRem(-13px) calculateRem(12px);
+            transition: .4s ease-in-out;
+        }
+
+
+        &__checkbox i {
+            color: $color-tertiary;
+            background-color: #fff;
+            padding: calculateEm(6px);
+            border-radius: 50px;
+            @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(15px), calculateRem(18px));
+            transform: rotate(-360deg);
+            transition: .4s ease-in;
         }
 
         @include breakpoint-up(large) {
