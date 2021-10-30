@@ -300,41 +300,51 @@ p {
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
+    visibility: visible;
   }
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @-moz-keyframes fadeOut {
   from {
     opacity: 1;
+    visibility: visible;
   }
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @-ms-keyframes fadeOut {
   from {
     opacity: 1;
+    visibility: visible;
   }
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @-o-keyframes fadeOut {
   from {
     opacity: 1;
+    visibility: visible;
   }
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes fadeOut {
   from {
     opacity: 1;
+    visibility: visible;
   }
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @-webkit-keyframes feelIt {
