@@ -2,6 +2,19 @@
 /*                     ANIM'S                 */
 /*------------------------------------------------*/
 
+@include keyframes(stroke-draw) {
+    from {
+        opacity: .1;
+    }
+
+    to {
+        opacity: 1;
+
+        stroke-dashoffset: 0;
+    }
+}
+
+
 @include keyframes(rainbow) {
     0% {
         background-position: left;
@@ -32,6 +45,16 @@
 
     to {
         opacity: 1;
+    }
+}
+
+@include keyframes(fadeOut) {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
 

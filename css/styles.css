@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.manualList, .hero, .locationForm, .header {
+.manualList, .hero, .loader, .locationForm, .header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,6 +122,51 @@ p {
 /*------------------------------------------------*/
 /*                     ANIM'S                 */
 /*------------------------------------------------*/
+@-webkit-keyframes stroke-draw {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes stroke-draw {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-ms-keyframes stroke-draw {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes stroke-draw {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes stroke-draw {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
 @-webkit-keyframes rainbow {
   0% {
     background-position: left;
@@ -250,6 +295,46 @@ p {
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-ms-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 @-webkit-keyframes feelIt {
@@ -653,6 +738,61 @@ p {
   .card {
     min-width: 28.25rem;
   }
+}
+
+/*------------------------------------------------*/
+/*                     LOADER                     */
+/*------------------------------------------------*/
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(246, 246, 246, 0.99);
+  z-index: 10;
+  -webkit-animation: fadeOut 1s ease-out forwards 6s;
+  -moz-animation: fadeOut 1s ease-out forwards 6s;
+  -ms-animation: fadeOut 1s ease-out forwards 6s;
+  -o-animation: fadeOut 1s ease-out forwards 6s;
+  animation: fadeOut 1s ease-out forwards 6s;
+}
+
+.loaderLogo {
+  height: 9vw;
+}
+.loaderLogo :nth-child(1) {
+  animation-delay: 0.2s;
+}
+.loaderLogo :nth-child(2) {
+  animation-delay: 0.4s;
+}
+.loaderLogo :nth-child(3) {
+  animation-delay: 0.6s;
+}
+.loaderLogo :nth-child(4) {
+  animation-delay: 0.8s;
+}
+.loaderLogo :nth-child(5) {
+  animation-delay: 1s;
+}
+.loaderLogo :nth-child(6) {
+  animation-delay: 1.2s;
+}
+.loaderLogo :nth-child(7) {
+  animation-delay: 1.4s;
+}
+.loaderLogo :nth-child(8) {
+  animation-delay: 1.6s;
+}
+.loaderLogo__char {
+  fill: none;
+  stroke: url(#linearY);
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  -webkit-animation: stroke-draw 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite alternate;
+  -moz-animation: stroke-draw 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite alternate;
+  -ms-animation: stroke-draw 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite alternate;
+  -o-animation: stroke-draw 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite alternate;
+  animation: stroke-draw 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite alternate;
 }
 
 /*------------------------------------------------*/

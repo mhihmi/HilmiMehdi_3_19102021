@@ -1,0 +1,31 @@
+/*------------------------------------------------*/
+/*                     LOADER                     */
+/*------------------------------------------------*/
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba($color-bg-primary, .99);
+    @extend %flex-jc-c;
+    z-index: 10;
+    @include animation(fadeOut 1s ease-out forwards 6s);
+}
+
+.loaderLogo {
+    height: 9vw;
+
+    @for $i from 1 to 9 {
+        :nth-child(#{$i}) {
+            animation-delay: $i * 0.2s;
+        }
+    }
+
+    &__char {
+        fill: none;
+        stroke: url(#linearY);
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        @include animation(stroke-draw 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite alternate);
+    }
+}
