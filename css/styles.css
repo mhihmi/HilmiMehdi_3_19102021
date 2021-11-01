@@ -718,7 +718,6 @@ p {
   position: absolute;
   top: 4%;
   right: 4%;
-  transform: translate(, );
   padding: 0.375em 0.625em;
   border-radius: 5px;
   background-color: #99e2d0;
