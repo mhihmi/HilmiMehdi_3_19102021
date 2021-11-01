@@ -45,12 +45,15 @@
     row-gap: calculateRem(25px);
     @include linx(black, black, $color-primary, $color-primary);
 
+    &__link {
+        @extend %flex-ai-c;
+    }
+
     &__item {
         position: relative;
         background: $color-bg-primary;
         border-radius: 20px;
         @include padding(calculateEm(30px), calculateEm(30px), calculateEm(24px), calculateEm(30px));
-        @extend %flex-ai-c;
         @include box-shadow(1, bottom);
         width: 100%;
         min-width: 90vw;

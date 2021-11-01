@@ -9,6 +9,7 @@
     border: none;
     border-radius: 50px;
     color: #fff;
+    text-decoration: none;
     @include box-shadow(2, bottom);
     @include background-gradient(rgba($color-secondary, 90%), rgba($color-primary, 90%), '175deg');
     position: relative;
@@ -54,8 +55,3 @@
     }
 
 }
-
-// .fa-heart path {
-//     stroke-dasharray: 1550;
-//     stroke-dashoffset: 1550;
-// }

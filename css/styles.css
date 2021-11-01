@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.manualList__item {
+.manualList__link {
   display: flex;
   align-items: center;
 }
@@ -642,6 +642,7 @@ p {
   border: none;
   border-radius: 50px;
   color: #fff;
+  text-decoration: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.12);
   background: rgba(255, 121, 218, 0.9);
   background: -webkit-linear-gradient(175deg, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
