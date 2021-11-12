@@ -141,7 +141,7 @@
         &__checkbox {
             @extend %flex-jc-c;
             background-color: $color-tertiary;
-            transform: translateX(100%);
+            transform: translateX(105%);
             flex-basis: 0%;
             border-radius: 0 15px 15px 0;
             margin: calculateRem(-15px) calculateRem(-24px) calculateRem(-13px) calculateRem(12px);
@@ -153,10 +153,15 @@
             color: $color-tertiary;
             background-color: #fff;
             padding: calculateEm(6px);
-            border-radius: 50px;
+            height: calculateRem(30px);
+            border-radius: 50%;
             @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(15px), calculateRem(18px));
             transform: rotate(-360deg);
             transition: .4s ease-in;
+
+            @include breakpoint-up(large) {
+                height: calculateRem(35px);
+            }
         }
 
         @include breakpoint-up(large) {

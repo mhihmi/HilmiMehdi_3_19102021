@@ -1,6 +1,4 @@
 @charset "UTF-8";
-/*######################### MIXIN MATERIAL BOX SHADOW START ##############################*/
-/*################ MIXIN MATERIAL BOX SHADOW END ###############################################################*/
 .card__caption {
   display: flex;
   justify-content: space-between;
@@ -1155,7 +1153,7 @@ p {
 }
 .menuBox__checkbox {
   background-color: #99e2d0;
-  transform: translateX(100%);
+  transform: translateX(105%);
   flex-basis: 0%;
   border-radius: 0 15px 15px 0;
   margin: -0.9375rem -1.5rem -0.8125rem 0.75rem;
@@ -1165,11 +1163,17 @@ p {
   color: #99e2d0;
   background-color: #fff;
   padding: 0.375em;
-  border-radius: 50px;
+  height: 1.875rem;
+  border-radius: 50%;
   font-size: 0.9375rem;
   font-size: clamp(0.9375rem, 0.8291602465rem + 0.4622496148vw, 1.125rem);
   transform: rotate(-360deg);
   transition: 0.4s ease-in;
+}
+@media (min-width: 64em) {
+  .menuBox__checkbox i {
+    height: 2.1875rem;
+  }
 }
 @media (min-width: 64em) {
   .menuBox {

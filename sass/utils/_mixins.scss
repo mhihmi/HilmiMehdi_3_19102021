@@ -96,8 +96,7 @@ $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
 }
 
 // BOX SHADOW
-
-/*######################### MIXIN MATERIAL BOX SHADOW START ##############################*/
+// MIXIN MATERIAL BOX SHADOW START 
 
 @mixin box_shadow ($level, $side) {
 
@@ -213,8 +212,7 @@ $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
 
 }
 
-/*################ MIXIN MATERIAL BOX SHADOW END ###############################################################*/
-
+// MIXIN MATERIAL BOX SHADOW END
 // ABSOLUTE ELEMENTS
 
 @mixin absolute-el ($top, $right, $bottom, $left, $x, $y) {
