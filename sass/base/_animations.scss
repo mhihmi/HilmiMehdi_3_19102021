@@ -37,7 +37,7 @@
     }
 }
 
-@include keyframes(fadeIn) {
+@include keyframes(fadeInY) {
     from {
         opacity: 0;
         transform: translateY(50%);

@@ -78,6 +78,13 @@
             @include breakpoint-up(large) {
                 margin-top: calculateRem(20px);
             }
+
+
+            @for $i from 2 to 5 {
+                :nth-child(#{$i}) {
+                    animation-delay: $i * 0.2s !important;
+                }
+            }
         }
 
         &__item {
@@ -105,8 +112,8 @@
                 }
             }
 
-            &:nth-child(-n+4) {
-                @include animation('fadeIn 1s ease-in-out both');
+            &:nth-child(n) {
+                @include animation('fadeInY 1s ease-in-out both');
             }
 
             @include breakpoint-up(large) {
@@ -114,11 +121,11 @@
             }
         }
 
-        @for $i from 1 to 5 {
-            :nth-child(#{$i}) {
-                animation-delay: $i * 0.2s;
-            }
-        }
+        // @for $i from 1 to 5 {
+        //     :nth-child(#{$i}) {
+        //         animation-delay: $i * 0.2s;
+        //     }
+        // }
 
         &__textDescription {
             margin-top: calculateRem(3px);
