@@ -121,12 +121,6 @@
             }
         }
 
-        // @for $i from 1 to 5 {
-        //     :nth-child(#{$i}) {
-        //         animation-delay: $i * 0.2s;
-        //     }
-        // }
-
         &__textDescription {
             margin-top: calculateRem(3px);
             @include fluid-type(calculateRem(375px), calculateRem(1024px), calculateRem(15px), calculateRem(18px));
