@@ -1,4 +1,7 @@
 # OC_P3_OhMyFood : Dynamisez une page web avec des animations CSS
+
+[![HitCount](https://hits.dwyl.com/mhihmi/HilmiMehdi_3_19102021.svg?style=flat&show=unique)](# "Unique View Count")
+[![HitCount](https://hits.dwyl.com/mhihmi/HilmiMehdi_3_19102021.svg?style=flat)](# "All View Count")
 > Intégration de Maquette et animation - Parcours Openclassrooms Développeur Web
 
 Vous venez d’être recruté chez Ohmyfood!, en tant que développeur junior. Félicitations !
